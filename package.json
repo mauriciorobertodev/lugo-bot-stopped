@@ -1,6 +1,6 @@
 {
     "name": "lugo-bot-stopped",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "main": "dist/main.js",
     "scripts": {
@@ -12,6 +12,8 @@
         "build": "clear && rm -rf dist && tsc",
         "image:build": "docker build -t mauricioroberto/lugo-bot-stopped:v$npm_package_version .",
         "image:push": "docker push mauricioroberto/lugo-bot-stopped:v$npm_package_version",
+        "image:latest": "docker build -t mauricioroberto/lugo-bot-stopped:latest . && docker push mauricioroberto/lugo-bot-stopped:latest",
+        "image:current": "docker build -t mauricioroberto/lugo-bot-stopped:v$npm_package_version . && docker push mauricioroberto/lugo-bot-stopped:v$npm_package_version",
         "up:watcher": "docker compose -f watcher-compose.yml -p builder up -d",
         "down:watcher": "docker compose -f watcher-compose.yml -p builder down",
         "up": "docker compose up"
