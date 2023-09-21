@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "target": "ES2022",
+        "removeComments": true,
+        "inlineSourceMap": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}
